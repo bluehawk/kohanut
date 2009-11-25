@@ -1,6 +1,6 @@
-## Warning Kohanut is still very much in alpha.  It is not ready for use.
+# Kohanut is still very much in alpha.  It is not ready for use.
 
-To install: (install process does not work yet)
+To install: (do not attempt)
 
 1- Download the source
 
