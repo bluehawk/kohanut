@@ -1,0 +1,629 @@
+/* Global Stuff */
+
+body{
+	background:#eee;
+	font-size:80%;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+p, table , ul {
+	margin-bottom:10px;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+h1 {
+	font-size:140%;
+}
+
+h2 {
+	font-size:130%;
+}
+
+h3 {
+	font-size:120%;
+}
+
+.clear {
+	clear:both;
+}
+
+/* Header */
+
+#headerwrapper {
+	width:100%;
+	background:#005014 url('img/header-bg.gif') top left repeat-x scroll;
+	height:50px;
+}
+
+#header {
+	width:960px;
+	margin:auto;
+	position:relative;
+}
+
+	#header #headerlogo {
+		position:absolute;
+		top:0;
+		left:0;
+	}
+
+	#header .info {
+		position:absolute;
+		right:1em;
+		top:0pt;
+		padding-top:15px;
+	}
+	
+	#header .info p{
+		padding:0; margin:0;
+		color:white;
+	}
+	
+	#header .info p a {
+		color:white;
+		text-decoration:none;
+	}
+		#header .info p a:hover {
+			text-decoration:underline;
+		}
+
+
+/* Main Nav */
+
+#mainnav {
+	float:left;
+	width:100%;
+	background:#858584 url('img/mainnav.gif') bottom left repeat-x scroll;
+}
+
+#mainnav ul {
+	width:960px;
+	margin:auto;
+}
+	#mainnav li {
+		display:block;
+		float:left;
+		margin-right:0.5em;
+		margin-top:5px;
+		border:1px solid #999;
+		height:25px;
+		padding-top:3px;
+		background:#c0c0c0 url('img/gray-gradient.gif') 0px -6px repeat-x scroll;
+		-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px;
+	}
+	
+		#mainnav li:hover {
+			background-position:0px 0px;
+		}
+		
+		#mainnav li.current {
+			background:#eee;
+			border-bottom:1px solid #eee;
+		}
+		
+		#mainnav li a {
+			text-decoration:none;
+			color:#333;
+			height:16px;
+			font-size:90%;
+			font-weight:bold;
+			padding:3px 1em 3px;
+		}
+		
+		
+		#mainnav li img {
+			position:relative;
+			left:-6px;
+			top:2px;
+		}
+		
+		#mainnav li.seperator {
+			border:none;
+			width:2px;
+			background:#888 url('img/seperator.gif') top left repeat-y scroll;
+			margin-top:7px;
+			height:20px;
+		}
+
+#mainnav .dropdown {
+	position:relative;
+}
+
+#mainnav .dropdown ul{
+	display:none;
+	position:absolute;
+	top:28px;
+	right:1px;
+	width:120px;
+	z-index:500;
+	border-top:1px solid #999;
+}
+
+#mainnav .dropdown:hover ul {
+	display:block;
+}
+
+	#mainnav .dropdown ul li {
+		height:25px;
+		width:120px;
+		float:left;
+		clear:left;
+		margin:0;
+		padding:0;
+		border-top:none;
+		-moz-border-radius-topleft: 0px; -webkit-border-top-left-radius: 0px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px;
+	}
+	
+	#mainnav .dropdown ul li a {
+		height:23px;
+		width:120px;
+		float:left;
+		margin:0;
+		padding:0;
+		padding-top:2px;
+		padding-left:10px;
+	}
+		
+/* Container */
+
+#container {
+	background:#eee;
+	width:960px;
+	position:relative;
+	margin:auto;
+}
+
+/* side column */
+#side {
+	position:absolute;
+	right:0;
+	top:0;
+	width:240px;
+	padding:10px 0;
+}
+
+/* main column */
+#main {
+	margin-right:250px;
+	padding:10px 0 10px;
+}
+
+
+/* if you don't want a left and main column, use id="full" */
+#full {
+	padding:10px 0;
+}
+
+.loginform li {
+	clear:left;
+}
+
+.loginform label {
+	float:left;
+	padding-top:3px;
+	width:80px;
+}
+
+.loginform input {
+	float:left;
+}
+
+
+/*  Box  */
+
+.box {
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+	background:white;
+	border:1px solid #888;
+}
+
+	.box>h1, .box>h2, .box>h3 {
+		-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px;
+		background:#c0c0c0 url('img/gray-gradient.gif') 0px -8px repeat-x scroll;
+		border-bottom:1px solid #888;
+		padding:3px;
+		padding-left:6px;
+	}
+	
+	.box .content {
+		margin:10px;
+	}
+
+
+/*   error box */
+
+#error {
+	background:#c0c0c0;
+	border:1px solid #888;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+	#error h3 {
+		padding:5px 5px;
+		background:#970000;
+		color:white;
+		-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px;
+	}
+	
+	#error p {
+		padding:7px 5px 0;
+		font-family:Arial,Helvetica,sans-serif;
+	}
+
+
+/*  Page tree - this is the tree that lists pages and has the options for editing them */
+		
+		/* treeview.css  http://jquery.bassistance.de/treeview/demo/ */
+		
+		.treeview, .treeview ul { 
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		
+		.treeview ul {
+			margin-top: 0px;
+		}
+		
+		.treeview .hitarea {
+			background: url('img/treeview.gif') -64px -25px no-repeat;
+			height: 16px;
+			width: 16px;
+			margin-left: -16px;
+			float: left;
+			cursor: pointer;
+		}
+		/* fix for IE6 */
+		* html .hitarea {
+			display: inline;
+			float:none;
+		}
+		
+		.treeview li { 
+			margin: 0;
+			padding: 0px 0pt 0px 16px;
+				
+		}
+		
+		.treeview a.selected {
+			background-color: #eee;
+		}
+		
+		#treecontrol { margin: 1em 0; display: none; }
+		
+		.treeview .hover { cursor: pointer; }
+		
+		.treeview li { background: url('img/treeview-line.gif') 0 0 no-repeat; }
+		.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
+		
+		.treeview .expandable-hitarea { background-position: -80px -3px; }
+		
+		.treeview li.last { background-position: 0 -1766px }
+		.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url('img/treeview.gif'); }  
+		.treeview li.lastCollapsable { background-position: 0 -111px }
+		.treeview li.lastExpandable { background-position: -32px -67px }
+		
+		.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+
+#pagetree {
+	padding-top:10px;
+}
+
+	#pagetree li {
+		
+	}
+	
+	/* make is so the parent element "Home" can't be collapsed, doesn't have the tickbox, doesn't have the padding */
+	#pagetree>li {
+		padding-left:0;
+		background:none;
+	}
+		#pagetree>li>.hitarea {
+			display:none;
+		}
+		
+
+		#pagetree li .pageinfo {
+			min-height:27px;
+			position:relative;
+			top:-6px;
+			z-index:2;
+			padding:0px 0 3px 24px;
+		   
+		}
+		
+		#pagetree li>.pageinfo { background:transparent url('img/fam/page.png') 2px 6px no-repeat scroll;}
+		#pagetree li .link  {background:transparent url('img/link.png') 1px 2px no-repeat scroll; position:absolute;top:0;left:0;width:16px;height:16px;}
+		#pagetree li.expandable>.pageinfo{ background:transparent url('img/folder.png') 3px 5px no-repeat scroll; }
+		#pagetree li.collapsable>.pageinfo{ background:transparent url('img/folder-open.png') 3px 5px no-repeat scroll; }
+		
+	#pagetree .pageinfo .pagetitle {
+		float:left;
+		padding:0;
+		margin:0;
+	}
+	
+		#pagetree .pageinfo .pagename {
+			font-weight:bold;
+			font-size:110%;
+			margin:0;
+			padding-top:2px;
+		}
+		
+		#pagetree .pageinfo .pageurl {
+			color:#666666;
+			font-size:110%;
+			padding-top:1px;
+			font-family:monospace;
+			margin:0;
+		}
+
+		#pagetree li .pageinfo:hover {
+			background-color:#CCFF99;
+			
+		}
+	
+		#pagetree .pageinfo .actions {
+			display:none;
+			float:right;
+			padding:2px 0 0;
+			z-index:1;
+		}
+			#pagetree .pageinfo:hover .actions {
+				display:block;
+			}
+			
+			#pagetree .pageinfo .actions a {
+				text-decoration:none;
+				font-size:70%;
+				text-align:center;
+				line-height:8px;
+				float:left;
+				color:#003300;
+				padding:0px 4px;
+			}
+			
+			#pagetree .pageinfo .actions a:hover span {
+				color:#009900;
+				text-decoration:underline;
+			}
+
+.headericon {
+	float:left;
+	position:relative;
+	padding-right:6px;
+	vertical-align:baseline;
+}
+
+.formAddPage {
+	
+}
+
+.formAddPage p {
+		float:left;
+		clear:left;
+}
+
+	.formAddPage label {
+		float:left;
+		width:130px;
+		text-align:right;
+		padding-top:6px;
+		padding-right:10px;
+	}
+	
+/* .standardlist - shows a list of elements, like layouts, elements, etc
+ *   .actions - are the buttons like add, edit, delete, etc.
+ */
+
+ul.standardlist {
+	list-style-type:none;
+	margin:0;padding:0;
+	margin-bottom:5px;
+}
+
+	ul.standardlist li {
+		background:white;
+		clear:left;
+	}
+	
+	ul.standardlist a {
+		cursor:pointer;
+		text-decoration:none;
+	}
+		ul.standardlist li.z {
+			background:#efefef;
+		}
+		
+		ul.standardlist li:hover {
+			background:#CCFF99;
+		}
+	
+	ul.standardlist li div.actions {
+		float:right;
+		display:none;
+		padding:0; margin:0;
+		padding-right:5px;
+	}
+	
+		ul.standardlist li:hover div.actions {
+			display:block;
+		}
+		
+		ul.standardlist div.actions a {
+			text-decoration:none;
+			font-size:70%;
+			text-align:center;
+			line-height:8px;
+			float:left;
+			color:#003300;
+			padding:2px 3px;
+		}
+		ul.standardlist div.actions a:hover span {
+			color:#009900;
+			text-decoration:underline;
+		}
+		
+	
+	ul.standardlist li p {
+		margin:0;
+		padding:8px;
+		color:black;
+		margin:0;
+		min-height:16px;
+	}
+	
+	ul.standardlist .addli p img {
+		display:inline;
+		padding-right:5px;
+	}
+	
+
+ul#redirectlist li .redirecttype {
+	color:#666666;
+	font-size:80%;
+	padding-left:5px;
+}
+ul#redirectlist .redirecticon {
+	padding:0 6px;
+}
+
+ul#layoutlist li .layoutdesc {
+	color:#666666;
+	font-size:80%;
+	padding-left:5px;
+}
+		
+	
+ul.pagecontentlist {
+	border:none;
+	margin-bottom:1px;
+}
+		
+.standardform {
+	
+}
+
+	.standardform li {
+		margin-bottom:5px;
+	}
+
+	.stardardform p {
+		clear:left;
+	}
+
+	.standardform label{
+		width:130px;
+		float:left;
+		padding-top:4px;
+		padding-right:10px;
+		text-align:right;
+	}
+	
+	.standardform label.group {
+		float:none;
+		display:inline;
+	}
+	
+	.standardform input {
+		width:300px;
+	}
+	
+	.standardform input.radio , .standardform input.check {
+		width:auto;
+	}
+	
+	.standardform .submit {
+		width:100px;
+		position:relative;
+		left:140px;
+		float:left;
+	}
+	
+	.standardform .cancel {
+		padding-top:5px;
+		position:relative;
+		float:left;
+		left:150px;
+		text-align:left;
+	}
+	
+	.standardform .errorMessage {
+		padding-left:10px;
+		color:red;
+	}
+	
+	.standardform textarea {
+		width:300px;
+		height:100px;
+	}
+	
+.leftform {
+	
+}
+
+	.leftform li {
+		clear:left;
+	}
+
+	.leftform label {
+		float:left;
+		clear:left;
+		font-weight:bold;
+	}
+	
+	.leftform input {
+		float:left;
+		clear:left;
+		width:200px;
+		margin-bottom:10px;
+	}
+	
+	.leftform textarea {
+		float:left;
+		clear:left;
+		width:500px;
+		height:200px;
+		margin-bottom:10px;
+	}
+	
+	.leftform .submit {
+		width:auto;
+		margin-bottom:10px;
+	}
+
+
+.error {
+	background:#FAA;
+	border:1px solid red;
+	padding:5px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+	.error ul {
+		list-style-type:disc;
+		padding-left:20px;
+	}
+	
+.errors {
+	background:#FAA;
+	border:1px solid red;
+	padding:5px;
+	font-weight:bold;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.success {
+	background:#aaffac;
+	border:1px solid #00ff40;
+	padding:5px;
+	font-weight:bold;
+	margin-bottom:10px;
+	margin-top:10px;
+}
