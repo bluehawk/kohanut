@@ -105,10 +105,8 @@ try
 }
 catch (Exception $e)
 {
-	echo "Error: " . $e;
-	return;
-	//print_r($e);
-	//throw $e;
+
+	throw $e;
 
 	try
 	{
