@@ -12,7 +12,7 @@
 	url = git://github.com/shadowhand/sprig.git
 [submodule "modules/sprig-mptt"]
 	path = modules/sprig-mptt
-	url = git://github.com/banks/sprig-mptt
+	url = git://github.com/banks/sprig-mptt.git
 [submodule "modules/kohanut"]
 	path = modules/kohanut
-	url = git://github.com/bluehawk/Kohanut.git
+	url = git://github.com/bluehawk/kohanut
