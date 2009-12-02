@@ -77,13 +77,6 @@ Kohana::modules(array(
  * defaults for the URI.
  */
 
-Route::set('kohanut-admin','admin(/<controller>(/<action>(/<params>)))',array('params'=>'.*'))
-	->defaults(array(
-		'controller' => 'pages',
-		'action'     => 'index',
-		'directory'  => 'kohanut/admin'
-	));
-
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
@@ -106,7 +99,7 @@ try
 catch (Exception $e)
 {
 
-	//throw $e;
+	throw $e;
 
 	try
 	{

@@ -23,7 +23,7 @@ Next, either copy **modules/kohanut/kohanutres** to **kohanutres** or link it (l
 
 ### Configure Database
 
-Edit your application/config/database.php with your database settings
+You should create a new user and database for use with kohanut, and then edit your **application/config/database.php** with those settings.
 
 ### Browse to /admin/install (not actually done yet)
 
