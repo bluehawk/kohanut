@@ -96,10 +96,10 @@ try
 		->send_headers()
 		->response;
 }
-catch (Exception $e)
+catch (ReflectionException $e)
 {
 
-	throw $e;
+	//throw $e;
 
 	try
 	{
