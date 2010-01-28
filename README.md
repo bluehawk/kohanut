@@ -47,3 +47,10 @@ For safety and security, move or rename the **modules/kohanut/controllers/admin/
 
 Browse to /admin and login with the username 'admin' and the password you specified during install, and enjoy!
 
+## Credits / Special Thanks
+
+Entire Kohana team for such an amazing framework.
+Shadowhand for sprig
+Banks for sprig-mptt
+Colonel-Rosa for his admin template
+
