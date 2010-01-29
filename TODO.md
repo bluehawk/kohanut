@@ -1,7 +1,7 @@
-secondary navs are exploded
-Layouts need to use twig, and stop being evil
-footer snippet is missing from install script
+ACL
 Element Caching
+Twig Layout's should be more friendly, Write an extension rather than passing the whole kohanut class.
+Plugins
 code elements don't work
 Layout Copy function isn't written (isn't needed?)
-Look into olly's dbforge for creating the tables
+Look into olly's dbforge/migration for creating the tables
