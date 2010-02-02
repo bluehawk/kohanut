@@ -18,6 +18,10 @@ First, clone the repository and fetch all submodules
     cd kohanut/
     git submodule init
     git submodule update
+    # now fetch the vendor stuff, like twig
+    cd modules/kohanut
+    git submodule init
+    git submodule update
     
 We need to make the logs and cache writable
 
@@ -53,4 +57,3 @@ Entire Kohana team for such an amazing framework.
 Shadowhand for sprig
 Banks for sprig-mptt
 Colonel-Rosa for his admin template
-

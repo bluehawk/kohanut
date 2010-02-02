@@ -60,7 +60,7 @@ Kohana::modules(array(
 	'database'    => MODPATH.'database',
 	'sprig'       => MODPATH.'sprig',
 	'sprig-mptt'  => MODPATH.'sprig-mptt',
-	'kohana-twig' => MODPATH.'kohana-twig',
+	//'kohana-twig' => MODPATH.'kohana-twig',
 	'kohanut'     => MODPATH.'kohanut'
 ));
 
