@@ -60,8 +60,7 @@ Kohana::modules(array(
 	'database'    => MODPATH.'database',
 	'sprig'       => MODPATH.'sprig',
 	'sprig-mptt'  => MODPATH.'sprig-mptt',
-	//'kohana-twig' => MODPATH.'kohana-twig',
-	'kohanut'     => MODPATH.'kohanut'
+	'kohanut'     => MODPATH.'kohanut',
 ));
 
 /**
@@ -92,19 +91,22 @@ catch (ReflectionException $e)
 {
 
 	//throw $e;
-
 	try
 	{
+		
 		$path = 'kohanut/view';
-		echo Request::factory($path)
+		echo Request::instance($path)
 			->execute()
 			->send_headers()
 			->response;
+			
 	}
 	catch (Exception $e)
 	{
-		echo "Kohanut threw an exception";
-		throw $e;
+		// Send the headers;
+		Request::instance()->send_headers();
+		// Find the error page and render it
+		echo Sprig::factory('page',array('url'=>'/error'))->load()->render();
+		
 	}
-
 }
