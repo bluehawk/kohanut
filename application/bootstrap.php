@@ -57,11 +57,11 @@ Kohana::$config->attach(new Kohana_Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	'userguide'   => MODPATH.'userguide',
 	'database'    => MODPATH.'database',
 	'sprig'       => MODPATH.'sprig',
 	'sprig-mptt'  => MODPATH.'sprig-mptt',
 	'kohanut'     => MODPATH.'kohanut',
+	'userguide'   => MODPATH.'userguide',
 ));
 
 /**
@@ -75,7 +75,6 @@ Route::set('default', '(<controller>(/<action>(/<id>)))')
 		'controller' => 'welcome',
 		'action'     => 'index',
 	));
-	
 
 /**
  * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
