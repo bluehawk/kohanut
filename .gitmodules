@@ -13,3 +13,6 @@
 [submodule "modules/kohanut"]
 	path = modules/kohanut
 	url = git://github.com/bluehawk/kohanut-core
+[submodule "modules/userguide"]
+	path = modules/userguide
+	url = git://github.com/kohana/userguide

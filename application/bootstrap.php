@@ -57,6 +57,7 @@ Kohana::$config->attach(new Kohana_Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
+	'userguide'   => MODPATH.'userguide',
 	'database'    => MODPATH.'database',
 	'sprig'       => MODPATH.'sprig',
 	'sprig-mptt'  => MODPATH.'sprig-mptt',
@@ -90,23 +91,14 @@ try
 catch (ReflectionException $e)
 {
 
-	//throw $e;
-	try
-	{
-		
-		$path = 'kohanut/view';
-		echo Request::instance($path)
-			->execute()
-			->send_headers()
-			->response;
-			
-	}
-	catch (Exception $e)
-	{
-		// Send the headers;
-		Request::instance()->send_headers();
-		// Find the error page and render it
-		echo Sprig::factory('page',array('url'=>'/error'))->load()->render();
-		
-	}
+	// Call Kohanut
+	$path = 'kohanut/view';
+	$request = Request::factory($path)->execute();
+	
+	// Send the headers from the Request singleton
+	Request::instance()->send_headers();
+	
+	// Echo the response
+	echo $request->response;
+
 }
