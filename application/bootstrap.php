@@ -26,6 +26,11 @@ spl_autoload_register(array('Kohana', 'auto_load'));
  */
 ini_set('unserialize_callback_func', 'spl_autoload_call');
 
+/**
+ * Set the production status
+ */
+define('IN_PRODUCTION',FALSE);
+
 //-- Configuration and initialization -----------------------------------------
 
 /**
@@ -41,7 +46,12 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
  * - boolean  profile	 enable or disable internal profiling			   TRUE
  * - boolean  caching	 enable or disable internal caching				 FALSE
  */
-Kohana::init(array('base_url' => '/', 'index_file'=>FALSE));
+Kohana::init(array(
+	'base_url'   => '/',
+	'index_file' => FALSE,
+	'profiling'  => ! IN_PRODUCTION,
+	'caching'    => IN_PRODUCTION,
+));
 
 /**
  * Attach the file write to logging. Multiple writers are supported.
