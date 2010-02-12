@@ -29,7 +29,7 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
 /**
  * Set the production status
  */
-define('IN_PRODUCTION',FALSE);
+define('IN_PRODUCTION',TRUE);
 
 //-- Configuration and initialization -----------------------------------------
 
