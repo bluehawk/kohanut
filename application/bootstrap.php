@@ -29,7 +29,7 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
 /**
  * Set the production status
  */
-define('IN_PRODUCTION',TRUE);
+define('IN_PRODUCTION',FALSE);
 
 //-- Configuration and initialization -----------------------------------------
 
@@ -98,8 +98,7 @@ try
 		->response;
 }
 catch (ReflectionException $e)
-{
-
+{	
 	// Call Kohanut
 	$path = 'kohanut/view';
 	$request = Request::factory($path)->execute();
